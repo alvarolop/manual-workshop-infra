@@ -5,6 +5,16 @@ You can take a look to the manual https://romerobu.github.io/manual-workshop-inf
 
 Repo used for course environment deployment is linked in the following section, and repositories used for the lab are linked in the manual instructions.
 
+## Quick set up
+
+```bash
+# Install dependencies
+npm install
+
+# Run locally
+gulp
+```
+
 ## Introduction
 
 _Manual Workshop Infra_ is a repository that includes a tutorial deployed on GitHub Pages. The goal of this tutorial is to learn how to deploy a distributed GitOps architecture plus _Day 2 operations_ and _applications_ following a GitOps approach. Some of the contents you can expect in this tutorial include: 
