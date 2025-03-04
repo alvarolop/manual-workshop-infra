@@ -703,7 +703,7 @@ image::argo-login-1.png[]
 .OpenShift credentials for argocd instance
 image::hub-login-1.png[]
 
-- Insert _user-<name>_ and _<pass>_ provided by instructor and click *_Log in_* button.
+- Insert _userXX_ and _<pass>_ provided by instructor and click *_Log in_* button.
 
 .argocd instance log in
 image::hub-login-2.png[]
@@ -765,7 +765,7 @@ image::managed-setup-a-name.png[]
 
 Verify in _Argo Hub_ console (E.g. https://console-openshift-console.apps.argo-hub.<domain>.opentlc.com/) using your user with view role.
 
-- *_user-<name>_*
+- *_userXX_*
 - *_<pass>_* provided by instructor at the beginning of the workshop
 
 Navigate to *_argocd_* instance:

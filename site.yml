@@ -3,12 +3,13 @@ runtime:
 
 site:
   title: GitOps Infrastructure Configuration Workshop
-  url: http://localhost:3000/rhs-build-course/index.html
+  url: https://alvarolop.github.io/manual-workshop-infra/index.html
   start_page: manual-workshop-infra::index.adoc
 
 content:
   sources:
-    - url: ./
+    - url: .
+      branches: HEAD
       start_path: documentation
 
 asciidoc:
@@ -21,7 +22,7 @@ asciidoc:
 
 ui:
   bundle:
-    url: https://github.com/redhat-developer-demos/rhd-tutorial-ui/releases/download/v0.1.9/ui-bundle.zip
+    url: https://github.com/aolle/rhd-tutorial-ui/releases/download/v0.2.0/ui-bundle.zip
     snapshot: true
   supplemental_files:
     - path: ./supplemental-ui

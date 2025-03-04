@@ -4,8 +4,7 @@ include::_attributes.adoc[]
 [#laboverview]
 == 2.1 Lab overview
 
-In this workshop we are covering a GitOps infrastructure configuration approach. 
-We will set an argo of argos and app of apps architecture to manage setup on destination clusters, and will apply day 2 operations on managed clusters.
+In this workshop we are covering a GitOps infrastructure configuration approach. We will set an argo of argos and app-of-apps architecture to manage setup on destination clusters, and will apply day 2 operations on managed clusters.
 
 _Argo Hub_ is a common OpenShift cluster for every user in this workshop that will be used for deploying the basic infrastructure on managed clusters using https://argo-cd.readthedocs.io/en/stable/user-guide/application-set/[ApplicationSet]. Managed clusters are a set of Single Node OpenShift, alias _SNO_, available for every user and day 2 operations will setup based on ArgoCD instance running on managed cluster.
 
@@ -16,13 +15,12 @@ Take a look at the general overview of the lab.
 .Laboratory overview
 image::diagram-1.png[]
 
-First of all, when you install GitOps operator, it will deploy a default argo instance which is intended for cluster configuration. So in this instance you will find an Application hub-setup
-which is deploying and managing a second argocd instance and its configuration.
+First of all, when you install GitOps operator, it will deploy a default argo instance which is intended for cluster configuration. So in this instance you will find an Application _gitops-setup_ which is deploying and managing a second argocd instance and its configuration.
 
 .Argo Hub instances
 image::diagram-2.png[]
 
-Then as an user lab, you will access to the second argo instance where you will have privileges enough thanks to _RBAC_ configuration to deploy an https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/[Application] for applying ApplicationSet to apply configuration on your managed cluster. In this instance you can expect two ApplicationSet: _gitops-setup_ and _bootstrap-sno_.
+As an user lab, you will access the second argo instance where you will have privileges enough thanks to _RBAC_ configuration to deploy an https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/[Application] for applying ApplicationSet to apply configuration on your managed cluster. In this instance you can expect two ApplicationSet: _gitops-setup_ and _bootstrap-sno_.
 
 .Argo Hub ApplicationSet 
 image::diagram-3.png[]
@@ -52,7 +50,7 @@ IMPORTANT: Replace *_<name>_* for your assigned cluster in this workshop. *_<pas
 [.console-input]
 [source, shell,subs="+macros,+attributes"]
 ----
-oc login -u user-<name> -p <pass> <ocp-hub-cluster-api>
+oc login -u userXX -p <pass> <ocp-hub-cluster-api>
 ----  
 
 It is possible to log in as well trough the web console, we recommend to do it because this way you will be able to jump between _Argo Hub_ and _SNO_ clusters easily.
@@ -65,7 +63,7 @@ IMPORTANT: Change _<domain>_ information, provided by the instructor at the begi
 .Argo Hub log in
 image::hub-login-1.png[]
 
-- Insert _user-<name>_ and _<pass>_ provided by instructor and click *_Log in_* button.
+- Insert _userXX_ and _<pass>_ provided by instructor and click *_Log in_* button.
 
 .Insert Argo Hub crentials to log in
 image::hub-login-2.png[]
@@ -104,7 +102,7 @@ image::argo-login-1.png[]
 .OpenShift credentials for openshift-gitops instance
 image::hub-login-1.png[]
 
-- Insert _user-<name>_ and _<pass>_ provided by instructor and click *_Log in_* button.
+- Insert _userXX_ and _<pass>_ provided by instructor and click *_Log in_* button.
 
 .openshift-gitops instance log in
 image::hub-login-2.png[]
@@ -160,7 +158,7 @@ image::hub-setup-app.png[]
 
 For this initial setup it is only required to create _argocd_ instance, _App Projects_, _Groups_, _Role Bindings_ and _Secrets_ for cluster destinations.
 
-Then once this second instance, _argocd_, is up and running, you can login to the argo console with your *_user-<name>_*:
+Then once this second instance, _argocd_, is up and running, you can login to the argo console with your *_userXX_*:
 
 IMPORTANT: Change _<domain>_ information, provided by the instructor at the beginning of this workshop.
 
@@ -175,7 +173,7 @@ image::argo-login-1.png[]
 .OpenShift credentials for argocd instance
 image::hub-login-1.png[]
 
-- Insert user _user-<name>_ and _<pass>_ provided by instructor and click *_Log in_* button.
+- Insert user _userXX_ and _<pass>_ provided by instructor and click *_Log in_* button.
 
 .argocd instance log in
 image::hub-login-2.png[]

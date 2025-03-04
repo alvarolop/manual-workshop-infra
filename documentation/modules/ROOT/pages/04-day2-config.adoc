@@ -183,7 +183,7 @@ IMPORTANT: *How to get _Keycloack_ secret*:
 .Log in Argo Hub OpenShift console
 image::hub-login-1.png[]
 
-- Insert _user-<name>_ and _<pass>_ provided by instructor and click *_Log in_* button.
+- Insert _userXX_ and _<pass>_ provided by instructor and click *_Log in_* button.
   
 2) Find _Keycloack_ URL, in OpenShift _Routes_ section, it should be something like: https://keycloak-keycloak.apps.argo-hub.<domain>.opentlc.com
   
